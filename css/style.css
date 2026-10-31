@@ -295,6 +295,15 @@ button {
   margin: 4px 0;
 }
 
+.cover-shloka {
+  font-family: "Tiro Devanagari Hindi", var(--font-body);
+  font-style: italic;
+  color: var(--maroon-soft);
+  font-size: 0.88rem;
+  line-height: 1.55;
+  margin: 6px 0 10px;
+}
+
 .kicker,
 .hero-kicker,
 .section-kicker {
@@ -343,27 +352,23 @@ button {
   text-align: center;
 }
 
-.jharokha {
-  width: 110px;
-  height: 124px;
-  margin: 12px auto;
+.ganesh-frame {
+  width: min(210px, 62%);
+  aspect-ratio: 1;
+  margin: 4px auto 10px;
+  border-radius: 50%;
+  overflow: hidden;
   border: 3px solid var(--gold);
-  border-bottom: 0;
-  border-radius: 90px 90px 8px 8px;
-  padding: 7px;
-  background: linear-gradient(180deg, #fff, #f3e6cf);
+  box-shadow: 0 8px 22px rgba(92, 22, 22, 0.18);
+  background: #fffaf1;
 }
 
-.jharokha-inner {
+.ganesh-frame img {
+  width: 100%;
   height: 100%;
-  border: 1px solid var(--maroon-soft);
-  border-bottom: 0;
-  border-radius: 80px 80px 6px 6px;
-  display: grid;
-  place-items: center;
+  object-fit: cover;
+  display: block;
 }
-
-.kalash { font-size: 2rem; }
 
 .cover-groom,
 .cover-bride {
@@ -842,11 +847,12 @@ button {
     outline-offset: -12px;
   }
 
-  .jharokha {
-    width: 84px;
-    height: 96px;
-    margin: 8px auto;
+  .ganesh-frame {
+    width: min(150px, 52%);
+    margin: 2px auto 8px;
   }
+
+  .cover-shloka { font-size: 0.78rem; }
 
   .cover-groom,
   .cover-bride { font-size: 1.18rem; }
@@ -898,7 +904,9 @@ button {
 }
 
 @media (max-height: 740px) {
-  .jharokha { width: 72px; height: 80px; }
+  .ganesh-frame { width: min(112px, 42%); }
+
+  .cover-shloka { font-size: 0.72rem; margin: 2px 0 6px; }
 
   .om-mark { font-size: 1.35rem; margin: 0; }
 
